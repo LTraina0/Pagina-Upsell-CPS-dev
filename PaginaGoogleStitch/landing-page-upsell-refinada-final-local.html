@@ -1,0 +1,560 @@
+<!DOCTYPE html><html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Revisão Estratégica do Contrato - LegalAdvise</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .premium-shadow {
+            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #e6c275 0%, #c5a359 100%);
+        }
+        
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #e6c275 0%, #c5a359 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .step-active {
+            box-shadow: 0 0 0 4px rgba(197, 163, 89, 0.2);
+        }
+    </style>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-tint": "#e6c275",
+                "outline": "#998f7f",
+                "on-secondary-fixed-variant": "#464741",
+                "on-primary-fixed-variant": "#5b4300",
+                "on-error-container": "#ffdad6",
+                "tertiary-fixed": "#e2e4d8",
+                "on-secondary-fixed": "#1a1c17",
+                "outline-variant": "#4d4639",
+                "inverse-primary": "#765a17",
+                "tertiary-fixed-dim": "#c5c8bc",
+                "primary-fixed-dim": "#e6c275",
+                "background": "#121411",
+                "primary": "#e6c275",
+                "on-secondary": "#2f312b",
+                "tertiary": "#c5c8bc",
+                "surface-container-high": "#292a27",
+                "surface-variant": "#333532",
+                "surface-container-lowest": "#0d0f0c",
+                "on-tertiary-fixed-variant": "#45483f",
+                "on-error": "#690005",
+                "secondary": "#c6c7be",
+                "inverse-surface": "#e3e3de",
+                "error": "#ffb4ab",
+                "on-secondary-container": "#b8b9b1",
+                "on-primary-fixed": "#261a00",
+                "surface": "#121411",
+                "on-primary": "#3f2e00",
+                "secondary-fixed": "#e3e3da",
+                "surface-bright": "#383a36",
+                "surface-dim": "#121411",
+                "on-primary-container": "#4f3900",
+                "inverse-on-surface": "#2f312e",
+                "primary-container": "#c5a359",
+                "on-tertiary": "#2e312a",
+                "on-tertiary-fixed": "#1a1d16",
+                "tertiary-container": "#a6a99e",
+                "on-surface-variant": "#d0c5b4",
+                "surface-container": "#1e201d",
+                "error-container": "#93000a",
+                "surface-container-low": "#1a1c19",
+                "on-tertiary-container": "#3b3e36",
+                "secondary-fixed-dim": "#c6c7be",
+                "secondary-container": "#484a43",
+                "on-background": "#e3e3de",
+                "on-surface": "#e3e3de",
+                "surface-container-highest": "#333532",
+                "primary-fixed": "#ffdf9e"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "stack-md": "16px",
+                "section-padding-mobile": "48px",
+                "container-max": "1200px",
+                "stack-lg": "32px",
+                "section-padding-desktop": "80px",
+                "gutter": "24px",
+                "stack-sm": "8px"
+        },
+        "fontFamily": {
+                "headline-xl": [
+                        "Montserrat"
+                ],
+                "headline-md": [
+                        "Montserrat"
+                ],
+                "label-sm": [
+                        "Inter"
+                ],
+                "headline-lg-mobile": [
+                        "Montserrat"
+                ],
+                "headline-lg": [
+                        "Montserrat"
+                ],
+                "body-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-md": [
+                        "Plus Jakarta Sans"
+                ]
+        },
+        "fontSize": {
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+</head>
+<body class="text-on-surface selection:bg-primary-container selection:text-on-primary-container" style="min-height: 100vh; background: linear-gradient(rgb(6, 23, 14) 0%, rgb(10, 6, 3) 100%) !important; font-family: Inter, sans-serif !important;">
+<!-- Section 1: Urgency Banner -->
+<section class="py-stack-md border-b border-error/20 bg-[#FF0000] text-white">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<p class="font-bold tracking-wider mb-stack-sm text-white">ESPERE! SUA COMPRA AINDA NÃO ESTÁ CONCLUÍDA</p>
+<p class="text-body-md opacity-90">Antes de acessar o seu Contrato de Prestação de Serviços Inteligente, continue nesta página, caso contrário essa oportunidade ficará para trás.</p>
+</div>
+</section>
+<!-- Section 2: Progress Stepper -->
+<nav class="py-section-padding-desktop bg-transparent"><div class="max-w-3xl mx-auto px-gutter">
+    <div class="relative flex items-center justify-between">
+        <!-- Connector Line -->
+        <div class="absolute top-4 left-0 w-full h-px bg-outline-variant/30 z-0"></div>
+        <div class="absolute top-4 left-0 w-1/2 h-px bg-primary z-0"></div>
+
+        <!-- Step 1: Completed -->
+        <div class="relative z-10 flex flex-col items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg">
+                <span class="material-symbols-outlined text-lg font-bold">check</span>
+            </div>
+            <span class="text-[12px] uppercase tracking-widest text-primary font-semibold">Contrato Inicial</span>
+        </div>
+
+        <!-- Step 2: Active -->
+        <div class="relative z-10 flex flex-col items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-surface border-2 border-primary flex items-center justify-center shadow-[0_0_15px_rgba(230,194,117,0.4)]">
+                <span class="text-primary font-bold text-sm">2</span>
+            </div>
+            <span class="text-[12px] uppercase tracking-widest text-primary font-bold">Revisão Estratégica</span>
+        </div>
+
+        <!-- Step 3: Pending -->
+        <div class="relative z-10 flex flex-col items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-surface border border-outline-variant/50 flex items-center justify-center">
+                <span class="text-on-surface-variant/50 font-bold text-sm">3</span>
+            </div>
+            <span class="text-[12px] uppercase tracking-widest text-on-surface-variant/50 font-medium">Compra concluída</span>
+        </div>
+    </div>
+</div></nav>
+<!-- Section 3: Hero -->
+<section class="pb-section-padding-desktop bg-transparent">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<h1 class="text-headline-lg-mobile md:text-headline-xl text-primary mb-stack-md max-w-4xl mx-auto font-bold">
+                Antes de enviar o contrato para seu prestador, tenha um olhar técnico sobre o documento.
+            </h1>
+<p class="text-body-lg text-on-surface-variant mb-stack-lg max-w-2xl mx-auto">
+                Sua minuta inteligente é excelente, mas cada negócio é único. Deixe que nossos especialistas realizem uma análise humana para blindar sua operação contra riscos específicos.
+            </p>
+<div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-3xl shadow-2xl border border-outline-variant/20"><div class="group relative cursor-pointer overflow-hidden">
+    <div class="aspect-video w-full bg-surface-container-highest/80"></div>
+    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+        <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary/90 text-on-primary flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110">
+            <span class="material-symbols-outlined text-5xl md:text-6xl">play_arrow</span>
+        </div>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent">
+        <p class="text-white font-label-sm text-sm tracking-widest uppercase">Assistir Vídeo de Apresentação</p>
+    </div>
+</div></div>
+</div>
+</section>
+<!-- Section 4: Offer Box -->
+<section class="py-section-padding-desktop border-y border-outline-variant/20 bg-transparent"><div class="max-w-container-max mx-auto px-gutter"><div class="bg-surface/50 backdrop-blur-md rounded-3xl p-section-padding-mobile md:p-section-padding-desktop border border-primary/30 premium-shadow text-center max-w-3xl mx-auto relative overflow-hidden transition-all duration-700 opacity-100 translate-y-0"><div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent pointer-events-none"></div><div class="relative z-10"><h2 class="text-headline-lg text-primary mb-stack-sm font-bold">Adicione a Revisão Estratégica ao seu pedido</h2><p class="text-body-md text-on-surface-variant mb-stack-lg">Não se preocupe em preencher tudo agora. Você terá até <span class="font-bold text-primary">60 dias</span> para solicitar sua revisão após a compra.</p><div class="space-y-stack-md"><button class="w-full gold-gradient text-on-primary py-stack-md px-gutter rounded-2xl font-bold text-lg hover:brightness-110 transition-all premium-shadow flex flex-col items-center border border-primary-fixed duration-700 opacity-100 translate-y-0">SIM, QUERO A REVISÃO ESTRATÉGICA<span class="text-xs font-normal opacity-80 mt-1 uppercase tracking-wider">Para revisar meu contrato antes de enviar ao prestador.</span></button><p class="text-xs text-on-surface-variant flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[16px]">lock</span> Transação 100% segura com criptografia bancária.</p></div></div></div></div></section>
+<!-- Section 5: Justification (Contrast Cards) -->
+<section class="py-section-padding-desktop bg-transparent">
+<div class="max-w-container-max mx-auto px-gutter">
+<h2 class="text-headline-lg text-primary text-center mb-section-padding-mobile font-bold">Por que essa revisão existe?</h2>
+<div class="grid md:grid-cols-2 gap-stack-lg">
+<!-- Pain Column -->
+<div class="space-y-stack-md">
+<h3 class="font-label-sm text-label-sm text-error flex items-center gap-stack-sm uppercase tracking-widest border-b border-error/20 pb-2">
+<span class="material-symbols-outlined">warning</span> O que muitos pensam...
+                    </h3>
+<div class="p-stack-md rounded-2xl border-l-4 border-error/50">
+<p class="text-on-surface-variant">"O contrato padrão já deve ser suficiente, não preciso de ninguém olhando os detalhes agora."</p>
+</div>
+<div class="p-stack-md rounded-2xl border-l-4 border-error/50">
+<p class="text-on-surface-variant">"Advogados demoram muito e vão travar o fechamento do negócio com o meu prestador."</p>
+</div>
+</div>
+<!-- Solution Column -->
+<div class="space-y-stack-md">
+<h3 class="font-label-sm text-label-sm text-primary flex items-center gap-stack-sm uppercase tracking-widest border-b border-primary/20 pb-2">
+<span class="material-symbols-outlined">verified</span> A realidade estratégica...
+                    </h3>
+<div class="bg-primary/10 p-stack-md rounded-2xl border-l-4 border-primary">
+<p class="text-primary-fixed font-medium">"Um pequeno erro na cláusula de rescisão pode custar 10x mais que este investimento hoje."</p>
+</div>
+<div class="bg-primary/10 p-stack-md rounded-2xl border-l-4 border-primary">
+<p class="text-primary-fixed font-medium">"Nossa revisão é focada em viabilizar o negócio, não em criar burocracia desnecessária."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Deliverables (Bento Grid Style -> Three Column Cards) -->
+<section class="py-section-padding-desktop border-y border-outline-variant/20 bg-transparent">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-section-padding-mobile">
+<span class="border border-outline-variant/50 rounded-full px-6 py-2 mb-6 inline-block text-primary text-sm tracking-widest uppercase font-semibold">O que você recebe</span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg text-primary font-bold">E ainda, você leva na Revisão</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md">
+<!-- Card 1 -->
+<div class="flex flex-col rounded-3xl overflow-hidden border border-outline-variant/30 premium-shadow h-full relative min-h-[320px] group transition-all duration-700 opacity-100 translate-y-0">
+<div class="absolute inset-0 z-0 opacity-30 transition-opacity duration-500 group-hover:opacity-40">
+<img alt="Revisão Humana" class="w-full h-full object-cover" src="assets/stitch-image-02.jpg">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/90 to-surface/20 z-0"></div>
+<div class="relative z-10 p-8 flex flex-col h-full items-center text-center">
+<span class="bg-surface/50 backdrop-blur-md text-primary border border-primary/30 px-4 py-1 rounded-full text-xs font-bold mb-auto tracking-widest uppercase">ITEM 01</span>
+<div class="mt-8 flex flex-col items-center w-full">
+<h3 class="text-2xl text-primary mb-3 leading-tight font-bold">Revisão Humana</h3>
+<div class="w-12 h-px bg-primary/50 mb-4"></div>
+<p class="text-on-surface-variant">Um advogado especialista analisa linha por linha do seu contrato específico.</p>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col rounded-3xl overflow-hidden border border-outline-variant/30 premium-shadow h-full relative min-h-[320px] group transition-all duration-700 opacity-100 translate-y-0">
+<div class="absolute inset-0 z-0 opacity-30 transition-opacity duration-500 group-hover:opacity-40">
+<img alt="Mapa de Ajustes" class="w-full h-full object-cover" src="assets/stitch-image-06.jpg">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/90 to-surface/20 z-0"></div>
+<div class="relative z-10 p-8 flex flex-col h-full items-center text-center">
+<span class="bg-surface/50 backdrop-blur-md text-primary border border-primary/30 px-4 py-1 rounded-full text-xs font-bold mb-auto tracking-widest uppercase">ITEM 02</span>
+<div class="mt-8 flex flex-col items-center w-full">
+<h3 class="text-2xl text-primary mb-3 leading-tight font-bold">Mapa de Ajustes</h3>
+<div class="w-12 h-px bg-primary/50 mb-4"></div>
+<p class="text-on-surface-variant">Documento complementar com sugestões práticas de redação e melhoria.</p>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col rounded-3xl overflow-hidden border border-outline-variant/30 premium-shadow h-full relative min-h-[320px] group transition-all duration-700 opacity-100 translate-y-0">
+<div class="absolute inset-0 z-0 opacity-30 transition-opacity duration-500 group-hover:opacity-40">
+<img alt="Limites de Risco" class="w-full h-full object-cover" src="assets/stitch-image-07.jpg">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/90 to-surface/20 z-0"></div>
+<div class="relative z-10 p-8 flex flex-col h-full items-center text-center">
+<span class="bg-surface/50 backdrop-blur-md text-primary border border-primary/30 px-4 py-1 rounded-full text-xs font-bold mb-auto tracking-widest uppercase">ITEM 03</span>
+<div class="mt-8 flex flex-col items-center w-full">
+<h3 class="text-2xl text-primary mb-3 leading-tight font-bold">Limites de Risco</h3>
+<div class="w-12 h-px bg-primary/50 mb-4"></div>
+<p class="text-on-surface-variant">Análise clara de até onde você deve ceder e onde deve se manter firme.</p>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col rounded-3xl overflow-hidden border border-outline-variant/30 premium-shadow h-full relative min-h-[320px] group transition-all duration-700 opacity-100 translate-y-0">
+<div class="absolute inset-0 z-0 opacity-30 transition-opacity duration-500 group-hover:opacity-40">
+<img alt="Encontro Online" class="w-full h-full object-cover" src="assets/stitch-image-05.jpg">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/90 to-surface/20 z-0"></div>
+<div class="relative z-10 p-8 flex flex-col h-full items-center text-center">
+<span class="bg-surface/50 backdrop-blur-md text-primary border border-primary/30 px-4 py-1 rounded-full text-xs font-bold mb-auto tracking-widest uppercase">ITEM 04</span>
+<div class="mt-8 flex flex-col items-center w-full">
+<h3 class="text-2xl text-primary mb-3 leading-tight font-bold">Encontro Online</h3>
+<div class="w-12 h-px bg-primary/50 mb-4"></div>
+<p class="text-on-surface-variant">1 hora de call via Zoom/Google Meet para tirar dúvidas em tempo real.</p>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="flex flex-col rounded-3xl overflow-hidden border border-outline-variant/30 premium-shadow h-full relative min-h-[320px] group transition-all duration-700 opacity-100 translate-y-0">
+<div class="absolute inset-0 z-0 opacity-30 transition-opacity duration-500 group-hover:opacity-40">
+<img alt="Guia de Uso" class="w-full h-full object-cover" src="assets/stitch-image-03.jpg">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/90 to-surface/20 z-0"></div>
+<div class="relative z-10 p-8 flex flex-col h-full items-center text-center">
+<span class="bg-surface/50 backdrop-blur-md text-primary border border-primary/30 px-4 py-1 rounded-full text-xs font-bold mb-auto tracking-widest uppercase">ITEM 05</span>
+<div class="mt-8 flex flex-col items-center w-full">
+<h3 class="text-2xl text-primary mb-3 leading-tight font-bold">Guia de Uso</h3>
+<div class="w-12 h-px bg-primary/50 mb-4"></div>
+<p class="text-on-surface-variant">Orientação sobre como apresentar as alterações para o seu prestador.</p>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="flex flex-col rounded-3xl overflow-hidden border border-outline-variant/30 premium-shadow h-full relative min-h-[320px] group transition-all duration-700 opacity-100 translate-y-0">
+<div class="absolute inset-0 z-0 opacity-30 transition-opacity duration-500 group-hover:opacity-40">
+<img alt="Prazo Extendido" class="w-full h-full object-cover" src="assets/stitch-image-04.jpg">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/90 to-surface/20 z-0"></div>
+<div class="relative z-10 p-8 flex flex-col h-full items-center text-center">
+<span class="bg-surface/50 backdrop-blur-md text-primary border border-primary/30 px-4 py-1 rounded-full text-xs font-bold mb-auto tracking-widest uppercase">ITEM 06</span>
+<div class="mt-8 flex flex-col items-center w-full">
+<h3 class="text-2xl text-primary mb-3 leading-tight font-bold">Prazo Extendido</h3>
+<div class="w-12 h-px bg-primary/50 mb-4"></div>
+<p class="text-on-surface-variant">Use o crédito da revisão a qualquer momento dentro de 60 dias.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Process -->
+<section class="py-section-padding-desktop bg-transparent">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="rounded-3xl p-section-padding-mobile md:p-section-padding-desktop border border-outline-variant/30 premium-shadow max-w-4xl mx-auto relative overflow-hidden transition-all duration-700 opacity-100 translate-y-0">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-surface to-surface pointer-events-none"></div>
+<div class="relative z-10">
+<div class="text-center mb-12">
+<span class="border border-outline-variant/50 rounded-full px-6 py-2 mb-6 inline-block text-primary text-sm tracking-widest uppercase font-semibold">Como funciona</span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg text-primary font-bold">O processo em 4 etapas</h2>
+</div>
+<div class="flex flex-col gap-6 max-w-3xl mx-auto">
+<!-- Step 1 -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-4">
+<div class="flex items-center gap-4 w-full md:w-auto">
+<div class="w-10 h-10 shrink-0 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-lg border border-primary/30">1</div>
+<h4 class="text-xl text-primary font-bold whitespace-nowrap">Compra do Upgrade</h4>
+</div>
+<div class="hidden md:block flex-1 border-b-2 border-dotted border-outline-variant/30 mx-6 mt-2"></div>
+<div class="flex items-center gap-3 w-full md:w-auto md:max-w-xs justify-end pl-14 md:pl-0">
+<p class="text-on-surface-variant text-left md:text-right">Você garante seu lugar agora com desconto exclusivo.</p>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-1 rounded-full shrink-0">check</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-4">
+<div class="flex items-center gap-4 w-full md:w-auto">
+<div class="w-10 h-10 shrink-0 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-lg border border-primary/30">2</div>
+<h4 class="text-xl text-primary font-bold whitespace-nowrap">Solicitação</h4>
+</div>
+<div class="hidden md:block flex-1 border-b-2 border-dotted border-outline-variant/30 mx-6 mt-2"></div>
+<div class="flex items-center gap-3 w-full md:w-auto md:max-w-xs justify-end pl-14 md:pl-0">
+<p class="text-on-surface-variant text-left md:text-right">Dentro de 60 dias, você nos envia sua minuta preenchida.</p>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-1 rounded-full shrink-0">check</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-4">
+<div class="flex items-center gap-4 w-full md:w-auto">
+<div class="w-10 h-10 shrink-0 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-lg border border-primary/30">3</div>
+<h4 class="text-xl text-primary font-bold whitespace-nowrap">Análise</h4>
+</div>
+<div class="hidden md:block flex-1 border-b-2 border-dotted border-outline-variant/30 mx-6 mt-2"></div>
+<div class="flex items-center gap-3 w-full md:w-auto md:max-w-xs justify-end pl-14 md:pl-0">
+<p class="text-on-surface-variant text-left md:text-right">Nossa equipe analisa e marca o encontro estratégico.</p>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-1 rounded-full shrink-0">check</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-4">
+<div class="flex items-center gap-4 w-full md:w-auto">
+<div class="w-10 h-10 shrink-0 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-lg border border-primary/30">4</div>
+<h4 class="text-xl text-primary font-bold whitespace-nowrap">Entrega</h4>
+</div>
+<div class="hidden md:block flex-1 border-b-2 border-dotted border-outline-variant/30 mx-6 mt-2"></div>
+<div class="flex items-center gap-3 w-full md:w-auto md:max-w-xs justify-end pl-14 md:pl-0">
+<p class="text-on-surface-variant text-left md:text-right">Você recebe o contrato blindado e pronto para assinatura.</p>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-1 rounded-full shrink-0">check</span>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="w-full md:w-auto min-w-[300px] gold-gradient text-on-primary py-stack-md px-section-padding-mobile rounded-2xl font-bold text-lg hover:brightness-110 transition-all premium-shadow border border-primary-fixed duration-700 opacity-100 translate-y-0">
+                ADICIONAR REVISÃO AO MEU PEDIDO
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 8: Details & Limitations (Bônus Restructure) -->
+<section class="py-section-padding-desktop border-y border-outline-variant/20 bg-transparent">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid md:grid-cols-2 gap-stack-lg">
+<div class="flex flex-col rounded-3xl overflow-hidden border border-outline-variant/30 premium-shadow h-full relative min-h-[320px] group transition-all duration-700 opacity-100 translate-y-0 bg-transparent">
+<div class="absolute inset-0 z-0 opacity-30 transition-opacity duration-500 group-hover:opacity-40">
+<img alt="Revisão Humana" class="w-full h-full object-cover" src="assets/stitch-image-02.jpg">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/90 to-surface/20 z-0"></div>
+<div class="relative z-10 p-8 flex flex-col h-full items-center text-center justify-end">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">person_search</span>
+<h3 class="text-2xl text-primary mb-3 leading-tight font-bold">Revisão Humana</h3>
+<div class="w-12 h-px bg-primary/50 mb-4"></div>
+<p class="text-on-surface-variant">Um advogado especialista analisa linha por linha do seu contrato específico.</p>
+</div>
+</div>
+<div class="flex flex-col rounded-3xl overflow-hidden border border-outline-variant/30 premium-shadow h-full relative min-h-[320px] group transition-all duration-700 opacity-100 translate-y-0 bg-transparent">
+<div class="absolute inset-0 z-0 opacity-30 transition-opacity duration-500 group-hover:opacity-40">
+<img alt="Mapa de Ajustes" class="w-full h-full object-cover" src="assets/stitch-image-06.jpg">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/90 to-surface/20 z-0"></div>
+<div class="relative z-10 p-8 flex flex-col h-full items-center text-center justify-end">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">edit_note</span>
+<h3 class="text-2xl text-primary mb-3 leading-tight font-bold">Mapa de Ajustes</h3>
+<div class="w-12 h-px bg-primary/50 mb-4"></div>
+<p class="text-on-surface-variant">Documento complementar com sugestões práticas de redação e melhoria.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 9: Final Pitch/Pricing -->
+<section class="py-section-padding-desktop bg-transparent">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<div class="border border-primary/50 rounded-3xl p-section-padding-mobile md:p-12 max-w-2xl mx-auto premium-shadow relative overflow-hidden transition-all duration-700 opacity-100 translate-y-0">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-surface to-surface pointer-events-none"></div>
+<div class="relative z-10">
+<span class="border border-primary text-primary px-stack-md py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-stack-md inline-block">Oferta Exclusiva de Upgrade</span>
+<h3 class="text-headline-lg text-primary mb-stack-md font-bold">Proteja seu investimento agora</h3>
+<div class="mb-stack-lg">
+<p class="text-on-surface-variant line-through text-lg">De R$ 1.497</p>
+<p class="text-4xl font-bold text-primary mb-2">12x de R$ 79,90</p>
+<p class="text-lg text-on-surface-variant">ou R$ 797 à vista</p>
+</div>
+<button class="w-full gold-gradient text-on-primary py-stack-md px-gutter rounded-2xl font-bold text-lg hover:brightness-110 transition-all premium-shadow mb-stack-sm border border-primary-fixed duration-700 opacity-100 translate-y-0">
+                        ADICIONAR REVISÃO AO MEU PEDIDO
+                    </button>
+<p class="text-xs text-on-surface-variant opacity-60">Acesso imediato às instruções após confirmação.</p>
+</div>
+</div>
+<button class="mt-stack-lg text-on-surface-variant opacity-60 hover:opacity-100 hover:text-primary transition-colors text-sm underline font-medium">
+                Não, obrigado. Prefiro seguir apenas com o contrato automático e assumir os riscos.
+            </button>
+</div>
+</section>
+<!-- Section 10: Guarantee -->
+<section class="py-section-padding-desktop border-t border-outline-variant/30 bg-transparent">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row items-center justify-center gap-stack-lg">
+<div class="flex-shrink-0">
+<div class="w-32 h-32 rounded-full border-2 border-primary/50 flex items-center justify-center p-stack-md text-center">
+<span class="font-bold text-primary text-display-lg-mobile leading-none text-4xl">7<br><span class="text-sm uppercase tracking-widest font-normal">Dias</span></span>
+</div>
+</div>
+<div class="text-center md:text-left max-w-2xl">
+<h2 class="text-headline-lg text-primary mb-stack-sm font-bold">O RISCO É TODO MEU</h2>
+<p class="text-body-md text-on-surface-variant">
+                        Você tem 7 dias para testar nosso ecossistema. Se por qualquer motivo você achar que a Revisão Estratégica não é para você, basta um único e-mail para nossa equipe e devolvemos 100% do seu investimento no upgrade, sem perguntas e sem letras miúdas.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<script>
+        // Micro-interactions and simple state management
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'scale(0.98)';
+                button.style.opacity = '0.9';
+            });
+            button.addEventListener('mouseup', () => {
+                button.style.transform = 'scale(1)';
+                button.style.opacity = '1';
+            });
+        });
+
+        // Simple scroll reveal for elements with premium-shadow
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.premium-shadow').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+            observer.observe(el);
+        });
+    </script>
+
+
+
+
+</body></html>
