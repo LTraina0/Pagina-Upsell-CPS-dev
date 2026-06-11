@@ -2,3 +2,9 @@ Documentos/
 PaginaGoogleStitch/_analysis/
 PaginaGoogleStitch/*screenshot*.jpg
 PaginaGoogleStitch/*.json
+.npm-cache/
+node_modules/
+output/
+package*.json
+part*.txt
+patch-*.js
