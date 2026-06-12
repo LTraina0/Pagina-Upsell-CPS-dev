@@ -41,6 +41,87 @@
         .step-active {
             box-shadow: 0 0 0 4px rgba(197, 163, 89, 0.2);
         }
+
+        .footer-figma {
+            background: rgba(230, 194, 117, 0.018);
+            border-top: 0.667px solid rgba(212, 175, 55, 0.1);
+            color: #7a756d;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 40.66px 180px 46.01px;
+        }
+        .footer-figma-container {
+            max-width: 1080px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 6px;
+        }
+        .footer-figma-logo-row {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .footer-figma-logo {
+            width: 139.98px;
+            max-width: 140px;
+            height: 71px;
+            object-fit: contain;
+            display: block;
+        }
+        .footer-figma-copy,
+        .footer-figma-legal {
+            margin: 0;
+            color: #7a756d;
+            font-family: var(--site-font);
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 20.8px;
+            text-align: center;
+            word-break: break-word;
+        }
+        .footer-figma-copy {
+            padding-top: 14px;
+        }
+        .footer-figma-email {
+            color: #c9a43a;
+            text-decoration: none;
+        }
+        .footer-figma-email:hover,
+        .footer-figma-email:focus-visible {
+            color: #e6c275;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .footer-figma-mobile {
+            display: none;
+        }
+        @media (max-width: 767px) {
+            .footer-figma {
+                padding: 40.67px 0 46px;
+            }
+            .footer-figma-container {
+                padding: 0 14px;
+            }
+            .footer-figma-copy,
+            .footer-figma-legal {
+                font-size: 15px;
+                line-height: 23.25px;
+            }
+            .footer-figma-copy {
+                padding-top: 13.455px;
+            }
+            .footer-figma-desktop {
+                display: none;
+            }
+            .footer-figma-mobile {
+                display: inline;
+            }
+        }
     </style>
 <script id="tailwind-config">
   tailwind.config = {
@@ -540,6 +621,17 @@
 </div>
 </div>
 </section>
+<footer class="footer-figma" aria-label="Rodapé">
+<div class="footer-figma-container">
+<div class="footer-figma-logo-row">
+<img class="footer-figma-logo" src="assets/logo-michelle-coelho-footer.png" alt="Michelle Coelho">
+</div>
+<p class="footer-figma-copy footer-figma-desktop">© 2026 Revisão Estratégica do Contrato de Prestação de Serviços. Todos os direitos reservados.</p>
+<p class="footer-figma-copy footer-figma-mobile">© 2026 Revisão Estratégica do Contrato de Prestação de Serviços. Todos os direitos reservados.</p>
+<p class="footer-figma-legal footer-figma-desktop">Michelle Coelho - Consultoria Empresarial Trabalhista | CNPJ 42.735.832/0001-04 | <a class="footer-figma-email" href="mailto:michelle@michellecoelho.com.br">michelle@michellecoelho.com.br</a></p>
+<p class="footer-figma-legal footer-figma-mobile">Michelle Coelho - Consultoria Empresarial Trabalhista<br>| CNPJ 42.735.832/0001-04 |<br><a class="footer-figma-email" href="mailto:michelle@michellecoelho.com.br">michelle@michellecoelho.com.br</a></p>
+</div>
+</footer>
 <script>
         // Micro-interactions and simple state management
         document.querySelectorAll('button').forEach(button => {
